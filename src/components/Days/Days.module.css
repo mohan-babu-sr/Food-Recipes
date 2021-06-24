@@ -1,0 +1,71 @@
+.day {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  float: left;
+  /* border: 1px solid rebeccapurple; */
+}
+
+.mon {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 260px;
+}
+.tue {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 660px;
+}
+.wed {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 1060px;
+}
+.thr {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 1460px;
+}
+.fri {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 1860px;
+}
+.sat {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 2260px;
+}
+.sun {
+  color: brown;
+  width: 10px;
+
+  height: 40px;
+
+  left: 100px;
+  top: 2660px;
+}

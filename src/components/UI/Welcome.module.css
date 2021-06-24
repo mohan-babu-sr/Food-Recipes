@@ -1,0 +1,12 @@
+.text {
+  font-size: 40px;
+  font-family: "Brush Script MT", cursive;
+  color: #008080;
+}
+
+.img {
+  border-radius: 35px;
+  height: 270px;
+  width: 450px;
+  box-shadow: 0 0 3rem #aaa;
+}
