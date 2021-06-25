@@ -32,7 +32,8 @@ function App() {
 
     const res = await req.json();
 
-    let count = 0;
+    let count = 0,
+      j = 0;
     // countarray = [];
     for (let i in res) {
       count++;
@@ -40,18 +41,19 @@ function App() {
     }
     // console.log(countarray.length);
     const random = uniqueRandom(1, count);
-    let j = 0;
+
     for (let i = 0; i < countarray.length; i++) {
       let uniqueID = random();
       if (j === 3) {
         return;
       } else {
         j++;
+
         recipeData.push(countarray[uniqueID]);
         setRescipeDetail(countarray[uniqueID]);
       }
     }
-    // console.log(recipeData.length);
+    // console.log(recipeData);
   };
 
   return (

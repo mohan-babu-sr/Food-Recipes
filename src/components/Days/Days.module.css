@@ -37,3 +37,10 @@
 .list {
   margin-left: 20px;
 }
+
+.popovericon {
+  width: 10%;
+  float: left;
+  text-align: center;
+  margin: 0;
+}

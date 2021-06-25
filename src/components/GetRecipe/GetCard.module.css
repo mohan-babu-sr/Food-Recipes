@@ -27,6 +27,13 @@
   display: none;
 }
 
+.iconsdiv {
+  float: left;
+}
+
+.icons {
+  padding-left: 50px;
+}
 .recipe h2 {
   background-color: rgba(161, 161, 161, 0.7);
   border-radius: 0.5rem;
@@ -63,6 +70,5 @@
   border: none;
   border-radius: 0.5rem;
   height: 2rem;
-  /* margin-bottom: 5px; */
-  margin-top: 5px;
+  margin-bottom: 5px;
 }

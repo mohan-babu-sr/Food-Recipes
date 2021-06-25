@@ -1,29 +1,38 @@
 import React, { useState } from "react";
 import classes from "./GetCard.module.css";
-// import RecipeDetails from "./RecipeDetails";
+import RecipeDetails from "./RecipeDetails";
+import PopoverPopupState from "../Days/RecipePopup";
+import ViewListIcon from "@material-ui/icons/ViewList";
+import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 
 const GetCard = props => {
-  // const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+
   const recipe = data => {
     console.log(data);
-    data = "changed";
-    console.log(data);
   };
-  // console.log(props.ingredients);
-
   return (
     <div className={classes.recipe}>
       <h2>{props.title}</h2>
       <img src={props.image} alt={props.title} />
+      <div className={classes.iconsdiv}>
+        <span className={classes.icons}>
+          <PopoverPopupState />
+        </span>
+        <span className={classes.icons}>
+          <ViewListIcon onClick={() => setShow(!show)} />
+        </span>
+        <span className={classes.icons}>
+          <RotateLeftIcon onClick={() => recipe(props.title)} />
+        </span>
+      </div>
+      <div className={classes.ulscroll}>
+        {show && <RecipeDetails ingredients={props.ingredients} />}
+      </div>
       {/* <a href={props.source} target='_blank' rel='noopener noreferrer'>
         URL
       </a> */}
-      <button onClick={() => recipe(props.title)}>Change Recipe</button>
-      {/* <button onClick={() => recipe(props.ingredients)}>Ingredients</button> */}
       {/* <button onClick={() => setShow(!show)}>Ingredients</button> */}
-      {/* <div className={classes.ulscroll}>
-        {show && <RecipeDetails ingredients={props.ingredients} />}
-      </div> */}
     </div>
   );
 };
