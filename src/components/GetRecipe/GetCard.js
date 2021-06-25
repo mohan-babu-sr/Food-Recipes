@@ -4,6 +4,10 @@ import RecipeDetails from "./RecipeDetails";
 
 const GetCard = props => {
   const [show, setShow] = useState(false);
+
+  const recipe = data => {
+    console.log(data);
+  };
   return (
     <div className={classes.recipe}>
       <h2>{props.title}</h2>
@@ -11,7 +15,7 @@ const GetCard = props => {
       <a href={props.source} target='_blank' rel='noopener noreferrer'>
         URL
       </a>
-      <button>Change Recipe</button>
+      <button onClick={() => recipe(props.title)}>Change Recipe</button>
       <button onClick={() => setShow(!show)}>Ingredients</button>
       <div className={classes.ulscroll}>
         {show && <RecipeDetails ingredients={props.ingredients} />}

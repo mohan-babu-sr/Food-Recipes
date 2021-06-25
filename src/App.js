@@ -38,7 +38,7 @@ function App() {
       count++;
       countarray.push(res[i]);
     }
-    console.log(countarray.length);
+    // console.log(countarray.length);
     const random = uniqueRandom(1, count);
 
     for (let i = 0; i < countarray.length; i++) {
