@@ -17,7 +17,7 @@ const GetCard = props => {
       <img src={props.image} alt={props.title} />
       <div className={classes.iconsdiv}>
         <span className={classes.icons}>
-          <PopoverPopupState />
+          <PopoverPopupState ingredients={props} />
         </span>
         <span className={classes.icons}>
           <ViewListIcon onClick={() => setShow(!show)} />

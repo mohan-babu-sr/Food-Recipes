@@ -23,7 +23,7 @@ const Monday = props => {
   return (
     <div className={classes.day}>
       <div className={classes.title}>
-        <h1>Monday</h1>
+        <h1 className={classes.h1}>Monday</h1>
       </div>
       {recipeList !== [] ? <h2>{recipeList}</h2> : "No Meals Found..!"}
     </div>

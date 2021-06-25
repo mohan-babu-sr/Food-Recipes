@@ -3,8 +3,12 @@
   display: flex;
   margin: 0 auto;
   float: left;
-  /* border: 1px solid rebeccapurple; */
+  /* border: 1px solid rgb(69, 65, 73); */
 }
+/* .title {
+  width: 10%;
+  /* border: 1px solid black; 
+} */
 
 .title h1 {
   font-size: 28px;
@@ -36,11 +40,4 @@
 
 .list {
   margin-left: 20px;
-}
-
-.popovericon {
-  width: 10%;
-  float: left;
-  text-align: center;
-  margin: 0;
 }
