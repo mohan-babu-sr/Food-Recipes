@@ -40,14 +40,18 @@ function App() {
     }
     // console.log(countarray.length);
     const random = uniqueRandom(1, count);
-
+    let j = 0;
     for (let i = 0; i < countarray.length; i++) {
       let uniqueID = random();
-
-      recipeData.push(countarray[uniqueID]);
-      setRescipeDetail(countarray[uniqueID]);
+      if (j === 3) {
+        return;
+      } else {
+        j++;
+        recipeData.push(countarray[uniqueID]);
+        setRescipeDetail(countarray[uniqueID]);
+      }
     }
-    // console.log(recipeData);
+    // console.log(recipeData.length);
   };
 
   return (

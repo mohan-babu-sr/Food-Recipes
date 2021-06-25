@@ -33,3 +33,7 @@
   max-width: 255px;
   background-color: #333;
 }
+
+.list {
+  margin-left: 20px;
+}

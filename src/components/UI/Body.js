@@ -7,11 +7,11 @@ import Thursday from "../Days/Thursday";
 import Friday from "../Days/Friday";
 import Saturday from "../Days/Saturday";
 import Sunday from "../Days/Sunday";
+import Ingredients from "../Days/Ingredients";
 
 const Body = props => {
-  // console.log(props.sendRecipe.length)
-  // let test=[1,2,3,4,5,6,7,8,9];
   const datas = props.sendRecipe;
+  // console.log(datas);
   let mon = [],
     tue = [],
     wed = [],
@@ -57,6 +57,14 @@ const Body = props => {
       <Friday sendRecipe={fri} />
       <Saturday sendRecipe={sat} />
       <Sunday sendRecipe={sun} />
+      <div>
+        <div className={classes.title}>
+          <h1>Ingredients List</h1>
+        </div>
+        <div className={classes.ingreidents}>
+          <Ingredients sendRecipe={datas} />
+        </div>
+      </div>
     </div>
   );
 };

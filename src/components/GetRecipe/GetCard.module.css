@@ -63,5 +63,6 @@
   border: none;
   border-radius: 0.5rem;
   height: 2rem;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  margin-top: 5px;
 }

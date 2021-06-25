@@ -2,10 +2,7 @@ import React from "react";
 import classes from "./Days.module.css";
 import GetCard from "../GetRecipe/GetCard";
 import { v4 as uuidv4 } from "uuid";
-
 const Monday = props => {
-  // console.log(props);
-
   const recipeList = props.sendRecipe.map((data, idx) => {
     return (
       <GetCard

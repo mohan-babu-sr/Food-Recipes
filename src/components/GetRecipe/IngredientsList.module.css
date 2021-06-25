@@ -1,0 +1,28 @@
+.root {
+  width: 40%;
+  border-radius: 10px;
+
+  min-height: 80px;
+  text-transform: capitalize;
+}
+.inline {
+  display: "inline";
+}
+
+ul {
+  float: left;
+  width: 200px;
+  height: 130px;
+  overflow-y: auto;
+  /* border: 1px solid black; */
+  /* background-color: cadetblue; */
+  border-radius: 5px;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+.checkbox {
+  position: absolute;
+}
