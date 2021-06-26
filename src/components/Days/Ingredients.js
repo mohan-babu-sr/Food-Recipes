@@ -4,6 +4,7 @@ import classes from "./Days.module.css";
 
 const Ingredients = props => {
   const recipeList = props.sendRecipe.map((data, idx) => {
+    // console.log(data.ingredients);
     return (
       <div className={classes.list}>
         <IngredientsList ingredients={data.ingredients} />

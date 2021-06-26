@@ -7,22 +7,30 @@ import Divider from "@material-ui/core/Divider";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 
+let ca = [];
+let ingArray = [];
 const IngredientsList = ({ ingredients }) => {
-  let ca = [];
   const [cart, setCart] = useState();
+
+  const listArray = ingredients.map(data => {
+    ingArray.push(data);
+  });
+
+  let checkRecipe = {};
   return ingredients.map(ingredient => {
-    let wrking = {};
-    let description = wrking[ingredient.description];
+    // console.log(ingredient.description);
+    let description = checkRecipe[ingredient.description];
     let quantity = 0;
-    if (wrking[ingredient.description] == undefined) {
-      wrking[ingredient.description] = ingredient.quantity;
+    if (checkRecipe[ingredient.description] == undefined) {
+      checkRecipe[ingredient.description] = ingredient.quantity;
       quantity = ingredient.quantity;
-      // console.log("if");
+      console.log("if");
     } else {
-      // console.log("else");
-      quantity = wrking[ingredient.description] + ingredient.quantity;
-      wrking[ingredient.description] = quantity;
+      console.log("else");
+      quantity = checkRecipe[ingredient.description] + ingredient.quantity;
+      checkRecipe[ingredient.description] = quantity;
     }
+    // console.log(description);
 
     // const checkboxHandler = () => {
     //   setCheck(true);
@@ -31,23 +39,17 @@ const IngredientsList = ({ ingredients }) => {
     let toggleCheckboxChange = e => {
       ca.push(e);
       setCart(ca);
+      console.log(ca);
     };
-    console.log(cart);
     return (
       <div>
         <List>
-          <ListItem
-            alignItems='flex-start'
-            // onClick={() => {
-            //   checkboxHandler();
-            // }}
-          >
+          <ListItem alignItems='flex-start'>
             <Divider variant='middle' component='li' />
             <input
               type='checkbox'
               value={ingredient.description}
               className={ingclasses.checkbox}
-              // onChange={toggleCheckboxChange}
               onClick={() => {
                 toggleCheckboxChange(ingredient);
               }}
@@ -63,7 +65,6 @@ const IngredientsList = ({ ingredients }) => {
                     <Typography
                       component='span'
                       variant='body2'
-                      //   className={classes.inline}
                       color='textPrimary'
                     >
                       {quantity ? quantity : "0"}

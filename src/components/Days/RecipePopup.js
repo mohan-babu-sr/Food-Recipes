@@ -12,7 +12,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Skeleton from "@material-ui/lab/Skeleton";
-import VirtualizedList from "./IngredientsPopup";
+// import VirtualizedList from "./IngredientsPopup";
 
 import PropTypes from "prop-types";
 
@@ -30,7 +30,7 @@ export default function PopoverPopupState(props) {
   const [url, setUrl] = useState(props.ingredients.url);
 
   const { loading = false } = props;
-  console.log(props.ingredients);
+  // console.log(props.ingredients);
 
   return (
     <PopupState

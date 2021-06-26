@@ -4,7 +4,7 @@ import RecipeDetails from "./RecipeDetails";
 import PopoverPopupState from "../Days/RecipePopup";
 import ViewListIcon from "@material-ui/icons/ViewList";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
-
+import SingleRecipe from "./SingleRecipe";
 const GetCard = props => {
   const [show, setShow] = useState(false);
 
@@ -23,6 +23,7 @@ const GetCard = props => {
           <ViewListIcon onClick={() => setShow(!show)} />
         </span>
         <span className={classes.icons}>
+          {/* <RotateLeftIcon onClick={() => SingleRecipe(props)} /> */}
           <RotateLeftIcon onClick={() => recipe(props.title)} />
         </span>
       </div>

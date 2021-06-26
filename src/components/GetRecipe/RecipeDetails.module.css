@@ -7,10 +7,16 @@
   margin-bottom: 7px;
   padding: 5px 0 5px 0;
   height: 40px;
-  width: 100%;
+  width: 95%;
+  overflow-y: auto;
+}
+
+.ingredientlist::-webkit-scrollbar {
+  display: none;
 }
 
 .ingredienttext {
+  /* width: 100%; */
   font-size: 1rem;
   color: #888;
   text-transform: capitalize;
